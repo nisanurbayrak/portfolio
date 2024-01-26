@@ -25,16 +25,6 @@
 .font-purple {
   color: var(--purple);
 }
-#Home,
-#About,
-#Projects,
-#Contact {
-  height: 100vh;
-}
-.center {
-  align-items: center;
-  justify-content: center;
-}
 .container2 {
   height: 100vh;
   align-items: center;
@@ -128,16 +118,7 @@ body {
   background-color: var(--purple);
   border-color: var(--purple);
 }
-/* .icon {
-  width: 10px;
-  text-align: center;
-  padding: 15px;
-  border-radius: 10%;
-  background-color: #e6e6e6;
-  text-decoration: none;
-  color: #000;
-} */
-
+/**/
 .icon2,
 .icon {
   width: 3.5rem;
@@ -153,12 +134,37 @@ body {
   padding: 5px;
   font-size: 1.2rem;
 }
-@media screen and (min-width: 578px) {
+/* @media screen and (min-width: 578px) {
   .small-height {
     height: 100vh;
   }
-}
+} */
 /*  */
 .ul {
   justify-content: space-between;
+}
+@media screen and (max-width: 575px) {
+  .navbar-brand {
+    display: none;
+  }
+  .frame{
+    max-width: 200px;
+    max-height: 200px;
+    border: .5px var(--bg-gray) solid;
+    justify-content: center;
+  }
+}
+.card{
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.card:hover{
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.1);
+}
+.card a {
+  visibility: hidden;
+}
+.card:hover a {
+  visibility: visible;
 }
