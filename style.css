@@ -54,8 +54,8 @@ display: none;
 }
 @media screen and (max-width: 768px) {
   .frame{
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 300px;
+    max-height: 300px;
   } #About,#Home,#Projects,#Contact{
     margin-top: 50px;
   }
@@ -107,9 +107,9 @@ display: none;
 }
 .sibling-fade > * {
   background: #f8f9fa;
-  padding: 1em;
+  padding: 0.7em;
   flex: auto;
-  margin: 0.3em;
+  margin: 0.1em;
   text-align: center;
   color: var(--purple) !important;
   font-size: 1.5em;
@@ -213,4 +213,85 @@ display: none;
 
 .about:hover::before{
   width: 100%;
+}
+
+/**/
+@keyframes wiggle {
+  0% { transform: rotateZ(2deg); }
+  50% { transform: rotateZ(-2deg); }
+  100% { transform: rotateZ(2deg); }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+.wrap {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.social {
+  padding: 0 10px;
+  font-size: 2rem;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.social ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  padding: 0 .5rem;
+  position: relative;
+  top: 30px;
+  transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+
+i:hover {
+  top: 7px;
+}
+
+.wiggler {
+  animation-name: wiggle;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+
+
+.mail{
+color: #DB4437;
+}
+
+.linkedin{
+color: #0077b5 ;
+}
+
+.github{
+color: #000;
+}
+
+#About{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
