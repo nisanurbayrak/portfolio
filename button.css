@@ -1,0 +1,49 @@
+/* button purple css */
+.btn-purple {
+    color: #fff;
+    width: 10rem;
+    border-radius: 50px;
+    background-color: var(--purple);
+    border-color: var(--dark-purple);
+  }
+  
+  .btn-purple:hover {
+    color: #fff;
+    background-color: var(--dark-purple);
+    border-color: var(--purple);
+  }
+
+  .btn-purple.disabled,
+  .btn-purple:disabled {
+    color: #fff;
+    background-color: var(--purple);
+    border-color: var(--dark-purple);
+  }
+  
+  .btn-outline-purple {
+    color: var(--purple);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--purple);
+  }
+  
+  .btn-outline-purple:hover {
+    color: #fff;
+    background-color: var(--purple);
+    border-color: var(--purple);
+  }
+  
+  .btn-outline-purple.disabled,
+  .btn-outline-purple:disabled {
+    color: var(--purple);
+    background-color: transparent;
+  }
+  
+  .btn-outline-purple:not(:disabled):not(.disabled):active,
+  .btn-outline-purple:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-purple.dropdown-toggle {
+    color: #fff;
+    background-color: var(--purple);
+    border-color: var(--purple);
+  }
+  /**/

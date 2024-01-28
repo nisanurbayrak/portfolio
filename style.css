@@ -1,15 +1,10 @@
 :root {
   --bg-gray: #f4f4f4;
   --purple: #bdc0ff;
-  --dark-purple: #aaa0ff;
+  --dark-purple: #9ca2ff;
 }
 .toggle-size {
   font-size: 28px;
-}
-.tdec {
-  text-decoration: none;
-  list-style: none;
-  display: flex;
 }
 .imgIcon {
   width: 42px;
@@ -37,109 +32,11 @@ body {
   background: var(--bg-gray) no-repeat center;
   background-size: cover;
 }
-/* button purple css */
-.btn-purple {
-  color: #000;
-  width: 10rem;
-  border-radius: 50px;
-  background-color: var(--purple);
-  border-color: var(--dark-purple);
-}
-
-.btn-purple:hover {
-  color: #000;
-  background-color: var(--dark-purple);
-  border-color: var(--purple);
-  padding-right: 25px;
-}
-.button:hover span,
-.btnCheck:hover span {
-  padding-right: 25px;
-}
-.button:hover span:after,
-.btnCheck:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.6s;
-}
-.button span,
-.btnCheck span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.btnCheck span:after {
-  content: "\2713";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.6s;
-}
-
-.btn-purple.disabled,
-.btn-purple:disabled {
-  color: #000;
-  background-color: var(--purple);
-  border-color: var(--dark-purple);
-}
-
-.btn-outline-purple {
-  color: var(--purple);
-  background-color: transparent;
-  background-image: none;
-  border-color: var(--purple);
-}
-
-.btn-outline-purple:hover {
-  color: #222;
-  background-color: var(--purple);
-  border-color: var(--purple);
-}
-
-.btn-outline-purple.disabled,
-.btn-outline-purple:disabled {
-  color: var(--purple);
-  background-color: transparent;
-}
-
-.btn-outline-purple:not(:disabled):not(.disabled):active,
-.btn-outline-purple:not(:disabled):not(.disabled).active,
-.show > .btn-outline-purple.dropdown-toggle {
-  color: #000;
-  background-color: var(--purple);
-  border-color: var(--purple);
-}
-/**/
 .icon2,
 .icon {
   width: 3.5rem;
   border-radius: 25%;
 }
-.pSmall {
-  font: 10px sans-serif;
-}
-.footerIcon {
-  color: var(--dark-purple);
-  text-decoration: none;
-  list-style: none;
-  padding: 5px;
-  font-size: 1.2rem;
-}
-/* @media screen and (min-width: 578px) {
-  .small-height {
-    height: 100vh;
-  }
-} */
-/*  */
 .ul {
   justify-content: space-between;
 }
@@ -148,10 +45,19 @@ body {
     display: none;
   }
   .frame{
-    max-width: 200px;
-    max-height: 200px;
-    border: .5px var(--bg-gray) solid;
-    justify-content: center;
+display: none;
+  }
+  #About,#Home,#Projects,#Contact{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .frame{
+    max-width: 250px;
+    max-height: 250px;
+  } #About,#Home,#Projects,#Contact{
+    margin-top: 50px;
   }
 }
 .card{
@@ -167,4 +73,144 @@ body {
 }
 .card:hover a {
   visibility: visible;
+}
+
+.contact-form textarea{
+  width: 18rem;
+}.contact-form input{
+  width: 18rem;
+}
+.sibling-fade {
+  visibility: hidden;
+}
+.sibling-fade > * {
+  visibility: visible;
+}
+.sibling-fade > * {
+  transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+}
+.sibling-fade:hover > * {
+  opacity: 0.4;
+  transform: scale(0.9);
+  cursor: pointer;
+  color: var(--dark-purple) !important;
+
+}
+.sibling-fade > *:hover {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0ms, 0ms;
+}
+.sibling-fade {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sibling-fade > * {
+  background: #f8f9fa;
+  padding: 1em;
+  flex: auto;
+  margin: 0.3em;
+  text-align: center;
+  color: var(--purple) !important;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.contact-form {
+  padding: 20px 10px;
+}
+
+.contact-form .item {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.contact-form form {
+  background-color: #f8f9fa;
+  margin: auto;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.contact-form .contact-button {
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--purple);
+  border: none;
+  color: #f8f9fa;
+  margin-top: 15px;
+}
+
+.contact-form textarea,
+.contact-form input {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+
+.card {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.1);
+}
+
+.card a {
+  visibility: hidden;
+}
+
+.card:hover a {
+  visibility: visible;
+}
+
+/* Add the following media query to make cards stack on smaller screens */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+.about {
+  background-image: linear-gradient(
+    to right,
+    var(--dark-purple),
+    var(--dark-purple) 50%,
+    #000 50%
+  );
+  border: 1px #9ca2ff;
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.about:before{
+  content: '';
+  background: var(--dark-purple);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.about:hover {
+ background-position: 0;
+}
+
+.about:hover::before{
+  width: 100%;
 }

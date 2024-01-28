@@ -13,8 +13,8 @@
   color: gray;
   width: var(--size);
   height: var(--size);
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 300px;
+  max-height: 300px;
   margin: 0 auto;
   border: 2px var(--bg-gray) solid;
   position: relative;
